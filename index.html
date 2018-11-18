@@ -1,0 +1,118 @@
+<html>
+<head>
+    <title>Web project</title>
+    <style>
+        #main{
+            width:50%;
+            height:50%;
+        }
+    </style>
+</head>
+<body>
+<center>
+    
+<h1> Welcome to my webpage </h1>
+    
+<button id="rtbtn" onclick="showrt()">Retailer</button>
+<button id="spbtn" onclick="showsp()">Shopper</button>
+    
+<div id="rt" style="display:none;">
+    <h1>Retailer</h1>
+    <button onclick="showrtsignupform()">SignUp</button>
+    <button onclick="showrtsigninform()">SignIn</button>
+    <br><br>
+    
+    
+    <div id="rtsignupform" style="display:none;">
+    <form>
+    <table>
+        <tr><td>First Name</td> <td><input type="text" id="fname"></td></tr>
+        <tr><td>Last Name</td> <td><input type="text" id="lname"></td></tr>
+        <tr><td>E-mail</td>     <td><input type="email" id="mail"></td></tr>
+        <tr><td>Address</td>    <td><textarea rows="2" cols="20"></textarea></td></tr>
+        <tr><td>Pan Number</td> <td><input type="text" id="pan"></td></tr>
+        <tr><td>New Password</td> <td><input type="password" id="pass"></td></tr>
+        <tr><td>Confirm New Password</td> <td><input type="password" id="pass"></td></tr>
+        <tr><td align="center"><input type="submit"></td> <td align="center"><input type="reset"></td></tr>
+        </table>
+    </form>
+    </div>
+    
+    
+    <div id="rtsigninform" style="display:none;">
+    <form>
+    <table>
+        <tr><td>E-mail</td>     <td><input type="email" id="mail"></td></tr>
+        <tr><td>Password</td> <td><input type="password" id="pass"></td></tr>
+        <tr><td align="center"><input type="submit"></td> <td align="center"><input type="reset"></td></tr>
+        </table>
+    </form>
+    </div>
+    
+    
+</div>
+    
+<div id="sp" style="display:none;">
+    <h1>Shopper</h1>
+    <button onclick="showspsignupform()">SignUp</button>
+    <button onclick="showspsigninform()">SignIn</button>
+    
+    
+    <div id="spsignupform" style="display:none;">
+    <form>
+    <table>
+        <tr><td>First Name</td> <td><input type="text" id="fname"></td></tr>
+        <tr><td>Last Name</td> <td><input type="text" id="lname"></td></tr>
+        <tr><td>E-mail</td>     <td><input type="email" id="mail"></td></tr>
+        <tr><td>Address</td>    <td><textarea rows="2" cols="20"></textarea></td></tr>
+        <tr><td>New Password</td> <td><input type="password" id="pass"></td></tr>
+        <tr><td>Confirm New Password</td> <td><input type="password" id="pass"></td></tr>
+        <tr><td align="center"><input type="submit"></td> <td align="center"><input type="reset"></td></tr>
+        </table>
+    </form>
+    </div>
+    
+    
+    <div id="spsigninform" style="display:none;">
+    <form>
+    <table>
+        <tr><td>E-mail</td>     <td><input type="email" id="mail"></td></tr>
+        <tr><td>Password</td> <td><input type="password" id="pass"></td></tr>
+        <tr><td align="center"><input type="submit"></td> <td align="center"><input type="reset"></td></tr>
+    </table>
+    </form>
+    </div>
+    
+</div>
+    
+</center>
+    
+</body>
+</html>
+
+<script>
+    function showrt(){
+        document.getElementById('rt').style.display="block";
+        document.getElementById('sp').style.display="none";
+    }
+    function showsp(){
+        document.getElementById('sp').style.display="block";
+        document.getElementById('rt').style.display="none";
+    }
+    function showrtsigninform(){
+        document.getElementById('rtsigninform').style.display="block";
+        document.getElementById('rtsignupform').style.display="none";
+    }
+    function showrtsignupform(){
+        document.getElementById('rtsignupform').style.display="block";
+        document.getElementById('rtsigninform').style.display="none";
+    }
+    function showspsigninform(){
+        document.getElementById('spsigninform').style.display="block";
+        document.getElementById('spsignupform').style.display="none";
+    }
+    function showspsignupform(){
+        document.getElementById('spsignupform').style.display="block";
+        document.getElementById('spsigninform').style.display="none";
+    }
+</script>
