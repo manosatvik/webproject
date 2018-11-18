@@ -2,17 +2,39 @@
 <head>
     <title>Web project</title>
     <style>
+        
+        #head{
+            height:20%;
+        }
         #main{
+            width:100%;
+        }
+        #left{
             width:50%;
-            height:50%;
+            float:left;
+            background-color: ;
+        }
+        #right{
+            width:50%;
+            float:right;
+            background-color: ;
         }
     </style>
 </head>
 <body>
+
+    
+    
+<div id="head">
 <center>
-    
 <h1> Welcome to my webpage </h1>
+</center>
+</div>
     
+    
+<div id="main">
+<div id="right">
+<center>
 <button id="rtbtn" onclick="showrt()">Retailer</button>
 <button id="spbtn" onclick="showsp()">Shopper</button>
     
@@ -24,7 +46,7 @@
     
     
     <div id="rtsignupform" style="display:none;">
-    <form>
+    <form action="rtsignup.php">
     <table>
         <tr><td>First Name</td> <td><input type="text" id="fname"></td></tr>
         <tr><td>Last Name</td> <td><input type="text" id="lname"></td></tr>
@@ -40,7 +62,7 @@
     
     
     <div id="rtsigninform" style="display:none;">
-    <form>
+    <form action="rtsignin.php">
     <table>
         <tr><td>E-mail</td>     <td><input type="email" id="mail"></td></tr>
         <tr><td>Password</td> <td><input type="password" id="pass"></td></tr>
@@ -59,7 +81,7 @@
     
     
     <div id="spsignupform" style="display:none;">
-    <form>
+    <form action="spsignup.php">
     <table>
         <tr><td>First Name</td> <td><input type="text" id="fname"></td></tr>
         <tr><td>Last Name</td> <td><input type="text" id="lname"></td></tr>
@@ -74,7 +96,7 @@
     
     
     <div id="spsigninform" style="display:none;">
-    <form>
+    <form action="spsignin.php">
     <table>
         <tr><td>E-mail</td>     <td><input type="email" id="mail"></td></tr>
         <tr><td>Password</td> <td><input type="password" id="pass"></td></tr>
@@ -84,8 +106,14 @@
     </div>
     
 </div>
-    
 </center>
+</div>
+<div id="left"> 
+<center>
+    <p>Hello world</p>
+</center>    
+</div>
+</div>
     
 </body>
 </html>
