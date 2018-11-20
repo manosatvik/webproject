@@ -46,15 +46,15 @@
     
     
     <div id="rtsignupform" style="display:none;">
-    <form action="rtsignup.php">
+    <form action="rtsignup.php" method="post">
     <table>
-        <tr><td>First Name</td> <td><input type="text" id="fname"></td></tr>
-        <tr><td>Last Name</td> <td><input type="text" id="lname"></td></tr>
-        <tr><td>E-mail</td>     <td><input type="email" id="mail"></td></tr>
-        <tr><td>Address</td>    <td><textarea rows="2" cols="20"></textarea></td></tr>
-        <tr><td>Pan Number</td> <td><input type="text" id="pan"></td></tr>
-        <tr><td>New Password</td> <td><input type="password" id="pass"></td></tr>
-        <tr><td>Confirm New Password</td> <td><input type="password" id="pass"></td></tr>
+        <tr><td>First Name</td> <td><input type="text" name="fname"></td></tr>
+        <tr><td>Last Name</td> <td><input type="text" name="lname"></td></tr>
+        <tr><td>E-mail</td>     <td><input type="email" name="mail"></td></tr>
+        <tr><td>Address</td>    <td><textarea rows="2" cols="20" name="address"></textarea></td></tr>
+        <tr><td>Pan Number</td> <td><input type="text" name="pan"></td></tr>
+        <tr><td>New Password</td> <td><input type="password" name="pass"></td></tr>
+        <tr><td>Confirm New Password</td> <td><input type="password" name="cpass"></td></tr>
         <tr><td align="center"><input type="submit"></td> <td align="center"><input type="reset"></td></tr>
         </table>
     </form>
@@ -62,10 +62,10 @@
     
     
     <div id="rtsigninform" style="display:none;">
-    <form action="rtsignin.php">
+    <form action="rtsignin.php" method="post">
     <table>
-        <tr><td>E-mail</td>     <td><input type="email" id="mail"></td></tr>
-        <tr><td>Password</td> <td><input type="password" id="pass"></td></tr>
+        <tr><td>E-mail</td>     <td><input type="email" name="rtmail"></td></tr>
+        <tr><td>Password</td> <td><input type="password" name="rtpass"></td></tr>
         <tr><td align="center"><input type="submit"></td> <td align="center"><input type="reset"></td></tr>
         </table>
     </form>
@@ -81,14 +81,14 @@
     
     
     <div id="spsignupform" style="display:none;">
-    <form action="spsignup.php">
+    <form action="spsignup.php" method="post">
     <table>
-        <tr><td>First Name</td> <td><input type="text" id="fname"></td></tr>
-        <tr><td>Last Name</td> <td><input type="text" id="lname"></td></tr>
-        <tr><td>E-mail</td>     <td><input type="email" id="mail"></td></tr>
-        <tr><td>Address</td>    <td><textarea rows="2" cols="20"></textarea></td></tr>
-        <tr><td>New Password</td> <td><input type="password" id="pass"></td></tr>
-        <tr><td>Confirm New Password</td> <td><input type="password" id="pass"></td></tr>
+        <tr><td>First Name</td> <td><input type="text" name="sfname"></td></tr>
+        <tr><td>Last Name</td> <td><input type="text" name="slname"></td></tr>
+        <tr><td>E-mail</td>     <td><input type="email" name="smail"></td></tr>
+        <tr><td>Address</td>    <td><textarea rows="2" cols="20" name="saddress"></textarea></td></tr>
+        <tr><td>New Password</td> <td><input type="password" name="spass"></td></tr>
+        <tr><td>Confirm New Password</td> <td><input type="password" name="scpass"></td></tr>
         <tr><td align="center"><input type="submit"></td> <td align="center"><input type="reset"></td></tr>
         </table>
     </form>
@@ -96,10 +96,10 @@
     
     
     <div id="spsigninform" style="display:none;">
-    <form action="spsignin.php">
+    <form action="spsignin.php" method="post">
     <table>
-        <tr><td>E-mail</td>     <td><input type="email" id="mail"></td></tr>
-        <tr><td>Password</td> <td><input type="password" id="pass"></td></tr>
+        <tr><td>E-mail</td>     <td><input type="email" name="spmail"></td></tr>
+        <tr><td>Password</td> <td><input type="password" name="sppass"></td></tr>
         <tr><td align="center"><input type="submit"></td> <td align="center"><input type="reset"></td></tr>
     </table>
     </form>
