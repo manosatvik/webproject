@@ -1,146 +1,195 @@
-<html>
-<head>
+
+    <html>
+  <head>
     <title>Web project</title>
     <style>
         
+        #title{
+          padding-top: 40px;
+        }
+
         #head{
-            height:20%;
+          height: 20%;
+          background-color: #787672; 
+
         }
         #main{
             width:100%;
+            height: 80%;
+            background-image: url('img\\fruit1.jpg');
+            background-size: cover;
         }
         #left{
             width:50%;
             float:left;
-            background-color: ;
+            height:100%;
+            
         }
         #right{
             width:50%;
+            height:100%;
             float:right;
-            background-color: ;
-        }
-    </style>
-</head>
-<body>
+          }
+          
+         .button {
+    background-color: #4CAF50; /* Green */
+    border: none;
+    color: white;
+    padding: 16px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    -webkit-transition-duration: 0.4s; /* Safari */
+    transition-duration: 0.4s;
+    cursor: pointer;
+}
 
-    
-    
-<div id="head">
-<center>
-<h1> Welcome to my webpage </h1>
-</center>
-</div>
-    
-    
-<div id="main">
-<div id="right">
-<center>
-<button id="rtbtn" onclick="showrt()">Retailer</button>
-<button id="spbtn" onclick="showsp()">Shopper</button>
-    
-<div id="rt" style="display:none;">
-    <h1>Retailer</h1>
-    <button onclick="showrtsignupform()">SignUp</button>
-    <button onclick="showrtsigninform()">SignIn</button>
-    <br><br>
-    
-    
-    <div id="rtsignupform" style="display:none;">
-    <form action="rtsignup.php" method="post">
-    <table>
-        <tr><td>First Name</td> <td><input type="text" name="fname"></td></tr>
-        <tr><td>Last Name</td> <td><input type="text" name="lname"></td></tr>
-        <tr><td>E-mail</td>     <td><input type="email" name="mail"></td></tr>
-        <tr><td>Address</td>    <td><textarea rows="2" cols="20" name="address"></textarea></td></tr>
-        <tr><td>Pan Number</td> <td><input type="text" name="pan"></td></tr>
-        <tr><td>New Password</td> <td><input type="password" name="pass"></td></tr>
-        <tr><td>Confirm New Password</td> <td><input type="password" name="cpass"></td></tr>
-        <tr><td align="center"><input type="submit"></td> <td align="center"><input type="reset"></td></tr>
-        </table>
-    </form>
+
+
+.button1 {
+    background-color: white;
+    color: black;
+    border: 2px solid #555555;
+    border-radius: 50%;
+}
+
+.button1:hover {
+    background-color: #555555;
+    color: white;
+}
+          
+    </style>
+  </head>
+
+  <body>
+
+    <div id="head">
+      <center>
+       <h1 id="title"> Fruit Farm </h1>
+      </center>
     </div>
     
-    
-    <div id="rtsigninform" style="display:none;">
-    <form action="rtsignin.php" method="post">
-    <table>
-        <tr><td>E-mail</td>     <td><input type="email" name="rtmail"></td></tr>
-        <tr><td>Password</td> <td><input type="password" name="rtpass"></td></tr>
-        <tr><td align="center"><input type="submit"></td> <td align="center"><input type="reset"></td></tr>
-        </table>
-    </form>
+    <div id="main">
+     <div id="right">
+       <center>
+         <button id="rtbtn" class="button button1" onclick="showrt()">Retailer</button>
+         <button id="spbtn" class="button button1" onclick="showsp()">Shopper</button>
+          
+          <div id="rt" style="display:none;">
+          
+            <h1>Retailer</h1>
+             <button onclick="showrtsignupform()" class="button button1">SignUp</button>
+             <button onclick="showrtsigninform()" class="button button1">SignIn</button>
+            <br><br>
+          
+          
+            <div id="rtsignupform" style="display:none;">
+              <form action="rtsignup.php" method="post">
+                <table>
+                  <tr><td>First Name</td> <td><input type="text" name="fname"></td></tr>
+                  <tr><td>Last Name</td> <td><input type="text" name="lname"></td></tr>
+                  <tr><td>E-mail</td>     <td><input type="email" name="mail"></td></tr>
+                  <tr><td>Address</td>    <td><textarea rows="2" cols="20" name="address"></textarea></td></tr>
+                  <tr><td>Pan Number</td> <td><input type="text" name="pan"></td></tr>
+                  <tr><td>New Password</td> <td><input type="password" name="pass"></td></tr>
+                  <tr><td>Confirm New Password</td> <td><input type="password" name="cpass"></td></tr>
+                  <tr><td align="center"><input type="submit" class="button button1"></td> <td align="center"><input type="reset" class="button button1"></td></tr>
+                </table>
+              </form>
+            </div>
+          
+          
+           <div id="rtsigninform" style="display:none;">
+             <form action="rtsignin.php" method="post">
+              <table>
+                <tr><td>E-mail</td>     <td><input type="email" name="rtmail"></td></tr>
+                <tr><td>Password</td> <td><input type="password" name="rtpass"></td></tr>
+                <tr><td align="center"><input type="submit" class="button button1"></td> <td align="center"><input type="reset" class="button button1"></td></tr>
+              </table>
+             </form>
+            </div>
+          </div>
+          
+          <div id="sp" style="display:none;">
+            <h1>Shopper</h1>
+              <button onclick="showspsignupform()" class="button button1">SignUp</button>
+              <button onclick="showspsigninform()" class="button button1">SignIn</button>
+          
+          
+            <div id="spsignupform" style="display:none;">
+              <form action="spsignup.php" method="post">
+                <table>
+                  <tr><td>First Name</td> <td><input type="text" name="sfname"></td></tr>
+                  <tr><td>Last Name</td> <td><input type="text" name="slname"></td></tr>
+                  <tr><td>E-mail</td>     <td><input type="email" name="smail"></td></tr>
+                  <tr><td>Address</td>    <td><textarea rows="2" cols="20" name="saddress"></textarea></td></tr>
+                  <tr><td>New Password</td> <td><input type="password" name="spass"></td></tr>
+                  <tr><td>Confirm New Password</td> <td><input type="password" name="scpass"></td></tr>
+                  <tr><td align="center"><input type="submit" class="button button1"></td> <td align="center"><input type="reset" class="button button1"></td></tr>
+                </table>
+              </form>
+            </div>
+          
+            <div id="spsigninform" style="display:none;">
+              <form action="spsignin.php" method="post">
+                <table>
+                  <tr><td>E-mail</td>     <td><input type="email" name="spmail"></td></tr>
+                  <tr><td>Password</td> <td><input type="password" name="sppass"></td></tr>
+                  <tr><td align="center"><input type="submit" class="button button1"></td> <td align="center"><input type="reset" class="button button1"></td></tr>
+                </table>
+              </form>
+            </div>
+          </div>
+        </center>
+      </div>
+      
+      <div id="left"> 
+        <center>
+          
+        </center>    
+      </div>
     </div>
-    
-    
-</div>
-    
-<div id="sp" style="display:none;">
-    <h1>Shopper</h1>
-    <button onclick="showspsignupform()">SignUp</button>
-    <button onclick="showspsigninform()">SignIn</button>
-    
-    
-    <div id="spsignupform" style="display:none;">
-    <form action="spsignup.php" method="post">
-    <table>
-        <tr><td>First Name</td> <td><input type="text" name="sfname"></td></tr>
-        <tr><td>Last Name</td> <td><input type="text" name="slname"></td></tr>
-        <tr><td>E-mail</td>     <td><input type="email" name="smail"></td></tr>
-        <tr><td>Address</td>    <td><textarea rows="2" cols="20" name="saddress"></textarea></td></tr>
-        <tr><td>New Password</td> <td><input type="password" name="spass"></td></tr>
-        <tr><td>Confirm New Password</td> <td><input type="password" name="scpass"></td></tr>
-        <tr><td align="center"><input type="submit"></td> <td align="center"><input type="reset"></td></tr>
-        </table>
-    </form>
-    </div>
-    
-    
-    <div id="spsigninform" style="display:none;">
-    <form action="spsignin.php" method="post">
-    <table>
-        <tr><td>E-mail</td>     <td><input type="email" name="spmail"></td></tr>
-        <tr><td>Password</td> <td><input type="password" name="sppass"></td></tr>
-        <tr><td align="center"><input type="submit"></td> <td align="center"><input type="reset"></td></tr>
-    </table>
-    </form>
-    </div>
-    
-</div>
-</center>
-</div>
-<div id="left"> 
-<center>
-    <p>Hello world</p>
-</center>    
-</div>
-</div>
-    
-</body>
+  </body>
 </html>
 
 <script>
-    function showrt(){
-        document.getElementById('rt').style.display="block";
-        document.getElementById('sp').style.display="none";
+  function showrt(){
+    document.getElementById('rt').style.display="block";
+    document.getElementById('sp').style.display="none";
+  }
+
+  function showsp(){
+    document.getElementById('sp').style.display="block";
+    document.getElementById('rt').style.display="none";
+  }
+    
+  function showrtsigninform(){
+    document.getElementById('rtsigninform').style.display="block";
+    document.getElementById('rtsignupform').style.display="none";
+    document.getElementById('spsignupform').style.display="none";
+    document.getElementById('spsigninform').style.display="none";
+  }
+
+  function showrtsignupform(){
+    document.getElementById('rtsignupform').style.display="block";
+    document.getElementById('rtsigninform').style.display="none";
+    document.getElementById('spsignupform').style.display="none";
+    document.getElementById('spsigninform').style.display="none";
+  }
+
+  function showspsigninform(){
+    document.getElementById('spsigninform').style.display="block";
+    document.getElementById('spsignupform').style.display="none";
+    document.getElementById('rtsignupform').style.display="none";
+    document.getElementById('rtsigninform').style.display="none";
     }
-    function showsp(){
-        document.getElementById('sp').style.display="block";
-        document.getElementById('rt').style.display="none";
-    }
-    function showrtsigninform(){
-        document.getElementById('rtsigninform').style.display="block";
-        document.getElementById('rtsignupform').style.display="none";
-    }
-    function showrtsignupform(){
-        document.getElementById('rtsignupform').style.display="block";
-        document.getElementById('rtsigninform').style.display="none";
-    }
-    function showspsigninform(){
-        document.getElementById('spsigninform').style.display="block";
-        document.getElementById('spsignupform').style.display="none";
-    }
-    function showspsignupform(){
-        document.getElementById('spsignupform').style.display="block";
-        document.getElementById('spsigninform').style.display="none";
-    }
+
+  function showspsignupform(){
+    document.getElementById('spsignupform').style.display="block";
+    document.getElementById('spsigninform').style.display="none";
+    document.getElementById('rtsignupform').style.display="none";
+    document.getElementById('rtsigninform').style.display="none";
+  }
 </script>

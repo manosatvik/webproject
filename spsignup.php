@@ -13,7 +13,7 @@ if(! $retval ) {
       die('Could not enter data: ' . mysqli_error($con));
    }
    
-   echo "<br><br><h1><center>shopper Registered successfully\n</center></h1>";
+   echo "<br><br><h1><center>Shopper Registered successfully\n</center></h1>";
    echo "<center>";
    echo "<h1>Click Here to sign In\t</h1>";
    echo "<form action='index.html'><input type='submit' value='signin'></form>";
